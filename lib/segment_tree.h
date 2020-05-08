@@ -2,6 +2,7 @@
 #define CPLIB_SEGMENT_TREE_H_
 
 #include <vector>
+#include <algorithm>
 
 class SegmentTree {
 private:
