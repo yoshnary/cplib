@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8acc63b1e238f3255c900eed37254b8">lib</a>
 * <a href="{{ site.github.repository_url }}/blob/master/lib/union_find.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-09 04:06:05+09:00
+    - Last commit date: 2020-05-09 04:18:10+09:00
 
 
 
@@ -53,7 +53,7 @@ layout: default
 
 class UnionFind {
 public:
-    UnionFind(int n) : par(n, -1), ran(n, -1) {};
+    UnionFind(int n) : par(n, -1), ran(n, -1) {}
 
     void unite(int x, int y) {
         x = find_root(x);
@@ -108,7 +108,7 @@ private:
 
 class UnionFind {
 public:
-    UnionFind(int n) : par(n, -1), ran(n, -1) {};
+    UnionFind(int n) : par(n, -1), ran(n, -1) {}
 
     void unite(int x, int y) {
         x = find_root(x);
