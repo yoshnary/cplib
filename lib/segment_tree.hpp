@@ -6,8 +6,8 @@
 
 class SegmentTree {
 private:
-    using Monoid = int;
-    const Monoid INI = (int)1e9 + 2;
+    using Monoid = long long;
+    const Monoid INI = (long long)1e18 + 2;
     Monoid op(Monoid a, Monoid b) {
         return std::min(a, b);
     }
