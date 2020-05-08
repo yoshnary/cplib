@@ -96,5 +96,4 @@ private:
     std::vector<Operator> dat_op;
 };
 
-
 #endif  // CPLIB_LAZY_SEGMENT_TREE_H_
