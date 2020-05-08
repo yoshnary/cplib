@@ -1,11 +1,11 @@
-#ifndef CPLIB_UNION_FIND_H_
-#define CPLIB_UNION_FIND_H_
+#ifndef CPLIB_LIB_UNION_FIND_H_
+#define CPLIB_LIB_UNION_FIND_H_
 
 #include <vector>
 
 class UnionFind {
 public:
-    UnionFind(int n) : par(n, -1), ran(n, -1) {};
+    UnionFind(int n) : par(n, -1), ran(n, -1) {}
 
     void unite(int x, int y) {
         x = find_root(x);
@@ -44,4 +44,4 @@ private:
     std::vector<int> par, ran;
 };
 
-#endif  // CPLIB_UNION_FIND_H_
+#endif  // CPLIB_LIB_UNION_FIND_H_

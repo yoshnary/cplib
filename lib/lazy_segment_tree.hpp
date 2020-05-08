@@ -1,5 +1,5 @@
-#ifndef CPLIB_LAZY_SEGMENT_TREE_H_
-#define CPLIB_LAZY_SEGMENT_TREE_H_
+#ifndef CPLIB_LIB_LAZY_SEGMENT_TREE_H_
+#define CPLIB_LIB_LAZY_SEGMENT_TREE_H_
 
 #include <vector>
 #include <algorithm>
@@ -96,4 +96,4 @@ private:
     std::vector<Operator> dat_op;
 };
 
-#endif  // CPLIB_LAZY_SEGMENT_TREE_H_
+#endif  // CPLIB_LIB_LAZY_SEGMENT_TREE_H_
