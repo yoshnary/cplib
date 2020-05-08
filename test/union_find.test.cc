@@ -1,6 +1,6 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/unionfind"
 
-#include "union_find.h"
+#include "../lib/union_find.h"
 #include <iostream>
 
 int main() {
