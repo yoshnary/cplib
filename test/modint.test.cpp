@@ -1,15 +1,10 @@
-#define PROBLEM "https://yukicoder.me/problems/1504"
+#define PROBLEM "https://yukicoder.me/problems/no/666"
 
 #include "../lib/modint.hpp"
 #include <iostream>
-#include <vector>
 
 int main() {
-    int n; std::cin >> n;
-    Mint ans = 1;
-    for (int i = 2; i <= n; i++) {
-        ans *= Mint(i);
-    }
-    std::cout << ans << std::endl;
+    Mint a, b; std::cin >> a >> b;
+    std::cout << a*b << std::endl;
     return 0;
 }
