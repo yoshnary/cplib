@@ -25,20 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: lib/segment_tree.hpp
+# :heavy_check_mark: lib/segment_tree.hpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#e8acc63b1e238f3255c900eed37254b8">lib</a>
 * <a href="{{ site.github.repository_url }}/blob/master/lib/segment_tree.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-09 01:30:42+09:00
+    - Last commit date: 2020-05-09 01:57:17+09:00
 
 
 
 
 ## Verified with
 
-* :x: <a href="../../verify/test/segment_tree.test.cpp.html">test/segment_tree.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/segment_tree.test.cpp.html">test/segment_tree.test.cpp</a>
 
 
 ## Code
@@ -54,8 +54,8 @@ layout: default
 
 class SegmentTree {
 private:
-    using Monoid = int;
-    const Monoid INI = (int)1e9 + 2;
+    using Monoid = long long;
+    const Monoid INI = (long long)1e18 + 2;
     Monoid op(Monoid a, Monoid b) {
         return std::min(a, b);
     }
@@ -124,8 +124,8 @@ private:
 
 class SegmentTree {
 private:
-    using Monoid = int;
-    const Monoid INI = (int)1e9 + 2;
+    using Monoid = long long;
+    const Monoid INI = (long long)1e18 + 2;
     Monoid op(Monoid a, Monoid b) {
         return std::min(a, b);
     }

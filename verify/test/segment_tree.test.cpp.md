@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: test/segment_tree.test.cpp
+# :heavy_check_mark: test/segment_tree.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/segment_tree.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-09 01:30:42+09:00
+    - Last commit date: 2020-05-09 01:57:17+09:00
 
 
 * see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_A">https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_A</a>
@@ -39,7 +39,7 @@ layout: default
 
 ## Depends on
 
-* :x: <a href="../../library/lib/segment_tree.hpp.html">lib/segment_tree.hpp</a>
+* :heavy_check_mark: <a href="../../library/lib/segment_tree.hpp.html">lib/segment_tree.hpp</a>
 
 
 ## Code
@@ -54,7 +54,7 @@ layout: default
 
 int main() {
     int n, q; std::cin >> n >> q;
-    SegmentTree seg(std::vector<int>(n, (1LL << 31) - 1));
+    SegmentTree seg(std::vector<long long>(n, (1LL << 31) - 1));
     for (int i = 0; i < q; i++) {
         int com, x, y; std::cin >> com >> x >> y;
         if (com) std::cout << seg.getval(x, y + 1) << std::endl;
@@ -81,8 +81,8 @@ int main() {
 
 class SegmentTree {
 private:
-    using Monoid = int;
-    const Monoid INI = (int)1e9 + 2;
+    using Monoid = long long;
+    const Monoid INI = (long long)1e18 + 2;
     Monoid op(Monoid a, Monoid b) {
         return std::min(a, b);
     }
@@ -140,7 +140,7 @@ private:
 
 int main() {
     int n, q; std::cin >> n >> q;
-    SegmentTree seg(std::vector<int>(n, (1LL << 31) - 1));
+    SegmentTree seg(std::vector<long long>(n, (1LL << 31) - 1));
     for (int i = 0; i < q; i++) {
         int com, x, y; std::cin >> com >> x >> y;
         if (com) std::cout << seg.getval(x, y + 1) << std::endl;
