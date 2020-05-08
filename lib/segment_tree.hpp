@@ -1,5 +1,5 @@
-#ifndef CPLIB_SEGMENT_TREE_H_
-#define CPLIB_SEGMENT_TREE_H_
+#ifndef CPLIB_LIB_SEGMENT_TREE_H_
+#define CPLIB_LIB_SEGMENT_TREE_H_
 
 #include <vector>
 #include <algorithm>
@@ -59,4 +59,4 @@ private:
     std::vector<Monoid> dat;
 };
 
-#endif  // CPLIB_SEGMENT_TREE_H_
+#endif  // CPLIB_LIB_SEGMENT_TREE_H_

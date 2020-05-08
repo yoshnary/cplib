@@ -1,5 +1,5 @@
-#ifndef CPLIB_UNION_FIND_H_
-#define CPLIB_UNION_FIND_H_
+#ifndef CPLIB_LIB_UNION_FIND_H_
+#define CPLIB_LIB_UNION_FIND_H_
 
 #include <vector>
 
@@ -44,4 +44,4 @@ private:
     std::vector<int> par, ran;
 };
 
-#endif  // CPLIB_UNION_FIND_H_
+#endif  // CPLIB_LIB_UNION_FIND_H_
