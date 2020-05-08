@@ -2,6 +2,7 @@
 #define CPLIB_LAZY_SEGMENT_TREE_H_
 
 #include <vector>
+#include <algorithm>
 
 class LazySegmentTree {
     // TODO: Change Monid and Operator,
