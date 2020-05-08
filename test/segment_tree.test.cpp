@@ -1,6 +1,6 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_A"
 
-#include "../lib/segment_tree.h"
+#include "../lib/segment_tree.hpp"
 #include <iostream>
 
 int main() {
