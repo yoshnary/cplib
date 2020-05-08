@@ -18,7 +18,7 @@ void init_fact() {
 
 // aCb
 Mint C(int a, int b) {
-    if (a < b) return 0;
+    if (a < 0 || b < 0 || a < b) return 0;
     Mint res = fact[a];
     res *= inv[b];
     res *= inv[a - b];
@@ -27,7 +27,7 @@ Mint C(int a, int b) {
 
 // aPb
 Mint P(int a, int b) {
-    if (a < b) return 0;
+    if (a < 0 || a < b) return 0;
     return fact[a] * inv[a - b];
 }
 
