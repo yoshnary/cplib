@@ -1,6 +1,6 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_G"
 
-#include "lazy_segment_tree.h"
+#include "../lib/lazy_segment_tree.h"
 #include <iostream>
 
 int main() {
