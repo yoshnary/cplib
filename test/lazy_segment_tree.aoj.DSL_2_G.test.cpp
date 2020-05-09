@@ -5,7 +5,7 @@
 
 int main() {
     int n, q; std::cin >> n >> q;
-    LazySegmentTree seg(n);
+    auto seg = make_rars_segment_tree(std::vector<long long>(n, 0));
     for (int i = 0; i < q; i++) {
         int com, s, t; std::cin >> com >> s >> t;
         s--;
