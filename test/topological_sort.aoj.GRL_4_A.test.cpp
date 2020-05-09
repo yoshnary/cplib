@@ -1,8 +1,8 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/4/GRL_4_A"
 
-#include "../lib/topological_sort.hpp"
 #include <iostream>
 #include <vector>
+#include "../lib/topological_sort.hpp"
 
 int main() {
     int n, m; std::cin >> n >> m;

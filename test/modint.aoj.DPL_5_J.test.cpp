@@ -1,8 +1,8 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_5_J"
 
-#include "../lib/modint.hpp"
 #include <iostream>
 #include <vector>
+#include "../lib/modint.hpp"
 
 int main() {
     int n, k; std::cin >> n >> k;
