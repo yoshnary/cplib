@@ -25,20 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: lib/euler-tour.hpp
+# :heavy_check_mark: lib/euler_tour.hpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#e8acc63b1e238f3255c900eed37254b8">lib</a>
-* <a href="{{ site.github.repository_url }}/blob/master/lib/euler-tour.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-09 19:14:08+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/lib/euler_tour.hpp">View this file on GitHub</a>
+    - Last commit date: 2020-05-09 20:29:45+09:00
 
 
 
 
 ## Verified with
 
-* :heavy_check_mark: <a href="../../verify/test/euler-tour.aoj.GRL_5_D.test.cpp.html">test/euler-tour.aoj.GRL_5_D.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/euler_tour.aoj.GRL_5_D.test.cpp.html">test/euler_tour.aoj.GRL_5_D.test.cpp</a>
 
 
 ## Code
@@ -103,7 +103,7 @@ private:
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "lib/euler-tour.hpp"
+#line 1 "lib/euler_tour.hpp"
 
 
 

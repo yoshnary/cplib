@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: test/euler-tour.aoj.GRL_5_D.test.cpp
+# :heavy_check_mark: test/euler_tour.aoj.GRL_5_D.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
-* <a href="{{ site.github.repository_url }}/blob/master/test/euler-tour.aoj.GRL_5_D.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-09 19:14:08+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/test/euler_tour.aoj.GRL_5_D.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2020-05-09 20:29:45+09:00
 
 
 * see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/5/GRL_5_D">https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/5/GRL_5_D</a>
@@ -39,7 +39,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/lib/euler-tour.hpp.html">lib/euler-tour.hpp</a>
+* :heavy_check_mark: <a href="../../library/lib/euler_tour.hpp.html">lib/euler_tour.hpp</a>
 * :heavy_check_mark: <a href="../../library/lib/segment_tree.hpp.html">lib/segment_tree.hpp</a>
 
 
@@ -51,7 +51,7 @@ layout: default
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/5/GRL_5_D"
 
 #include <iostream>
-#include "../lib/euler-tour.hpp"
+#include "../lib/euler_tour.hpp"
 #include "../lib/segment_tree.hpp"
 
 int main() {
@@ -89,11 +89,11 @@ int main() {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "test/euler-tour.aoj.GRL_5_D.test.cpp"
+#line 1 "test/euler_tour.aoj.GRL_5_D.test.cpp"
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/5/GRL_5_D"
 
 #include <iostream>
-#line 1 "lib/euler-tour.hpp"
+#line 1 "lib/euler_tour.hpp"
 
 
 
@@ -215,7 +215,7 @@ private:
 };
 
 
-#line 6 "test/euler-tour.aoj.GRL_5_D.test.cpp"
+#line 6 "test/euler_tour.aoj.GRL_5_D.test.cpp"
 
 int main() {
     int n; std::cin >> n;
