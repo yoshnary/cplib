@@ -1,11 +1,11 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_G"
 
-#include "../lib/lazy_segment_tree.hpp"
 #include <iostream>
+#include "../lib/lazy_segment_tree.hpp"
 
 int main() {
     int n, q; std::cin >> n >> q;
-    LazySegmentTree seg(n);
+    auto seg = make_rars_segment_tree(std::vector<long long>(n, 0));
     for (int i = 0; i < q; i++) {
         int com, s, t; std::cin >> com >> s >> t;
         s--;
