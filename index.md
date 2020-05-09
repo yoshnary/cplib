@@ -38,6 +38,7 @@ layout: default
 
 ### lib
 
+* :heavy_check_mark: <a href="library/lib/combinatorics.hpp.html">lib/combinatorics.hpp</a>
 * :heavy_check_mark: <a href="library/lib/lazy_segment_tree.hpp.html">lib/lazy_segment_tree.hpp</a>
 * :heavy_check_mark: <a href="library/lib/matrix_power.hpp.html">lib/matrix_power.hpp</a>
 * :heavy_check_mark: <a href="library/lib/modint.hpp.html">lib/modint.hpp</a>
@@ -47,6 +48,12 @@ layout: default
 
 ## Verify Files
 
+* :heavy_check_mark: <a href="verify/test/combinatorics.aoj.DPL_5_C.test.cpp.html">test/combinatorics.aoj.DPL_5_C.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/combinatorics.aoj.DPL_5_D.test.cpp.html">test/combinatorics.aoj.DPL_5_D.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/combinatorics.aoj.DPL_5_E.test.cpp.html">test/combinatorics.aoj.DPL_5_E.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/combinatorics.aoj.DPL_5_F.test.cpp.html">test/combinatorics.aoj.DPL_5_F.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/combinatorics.aoj.DPL_5_G.test.cpp.html">test/combinatorics.aoj.DPL_5_G.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/combinatorics.aoj.DPL_5_I.test.cpp.html">test/combinatorics.aoj.DPL_5_I.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/lazy_segment_tree.test.cpp.html">test/lazy_segment_tree.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/matrix_power.test.cpp.html">test/matrix_power.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/modint.test.cpp.html">test/modint.test.cpp</a>

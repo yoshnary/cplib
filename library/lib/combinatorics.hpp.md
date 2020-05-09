@@ -25,20 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: lib/modint.hpp
+# :heavy_check_mark: lib/combinatorics.hpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#e8acc63b1e238f3255c900eed37254b8">lib</a>
-* <a href="{{ site.github.repository_url }}/blob/master/lib/modint.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-09 02:54:48+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/lib/combinatorics.hpp">View this file on GitHub</a>
+    - Last commit date: 2020-05-09 05:42:03+09:00
 
 
 
 
-## Required by
+## Depends on
 
-* :heavy_check_mark: <a href="combinatorics.hpp.html">lib/combinatorics.hpp</a>
+* :heavy_check_mark: <a href="modint.hpp.html">lib/modint.hpp</a>
 
 
 ## Verified with
@@ -49,9 +49,6 @@ layout: default
 * :heavy_check_mark: <a href="../../verify/test/combinatorics.aoj.DPL_5_F.test.cpp.html">test/combinatorics.aoj.DPL_5_F.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/test/combinatorics.aoj.DPL_5_G.test.cpp.html">test/combinatorics.aoj.DPL_5_G.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/test/combinatorics.aoj.DPL_5_I.test.cpp.html">test/combinatorics.aoj.DPL_5_I.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/test/matrix_power.test.cpp.html">test/matrix_power.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/test/modint.test.cpp.html">test/modint.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/test/modint_pow.test.cpp.html">test/modint_pow.test.cpp</a>
 
 
 ## Code
@@ -59,96 +56,46 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#ifndef CPLIB_LIB_MODINT_H_
-#define CPLIB_LIB_MODINT_H_
+#ifndef CPLIB_LIB_COMBINATORICS_H_
+#define CPLIB_LIB_COMBINATORICS_H_
 
-#include <iostream>
+#include "../lib/modint.hpp"
+#include <vector>
 
-// Modint
-struct Mint {
-    static const long long mod = (long long)1e9 + 7;
-    long long val;
+// Combinatorics
+constexpr int MAX_N = 2000003;
+std::vector<Mint> fact(MAX_N), inv(MAX_N);
 
-    Mint() { val = 0; }
-    Mint(long long a) { val = a; verify_value(); }
-
-    void verify_value() {
-        if (val >= mod) val %= mod;
-        if (val < 0) val %= mod, val += mod;
+void init_fact() {
+    fact[0] = inv[0] = 1;
+    for (long long i = 1; i < MAX_N; i++) {
+        fact[i] = fact[i - 1] * Mint(i);
+        inv[i] = fact[i].inv();
     }
-
-    Mint pow(long long p) const {
-        Mint cur = Mint(val), ret = 1;
-        while (p > 0) {
-            if (p & 1) ret *= cur;
-            cur *= cur;
-            p >>= 1LL;
-        }
-        return ret;
-    }
-    Mint inv() const {
-        if (val == 0)
-            std::cerr << "WARNING: inv() is called with 0." << std::endl;
-        return pow(mod - 2);
-    }
-
-    Mint operator+() const { return *this; }
-    Mint operator-() const { return Mint(mod - val); }
-
-    Mint operator+=(const Mint &a) {
-        val += a.val;
-        if (val >= mod) val -= mod;
-        return Mint(val);
-    }
-    Mint operator*=(const Mint &a) {
-        val *= a.val;
-        if (val >= mod) val %= mod;
-        return Mint(val);
-    }
-    Mint operator-=(const Mint &a) { return *this += -a; }
-    Mint operator/=(const Mint &a) { return *this *= a.inv(); }
-
-    Mint operator++() { return *this += Mint(1); }
-    Mint operator--() { return *this -= Mint(1); }
-    Mint operator++(int) {
-        Mint ret = *this;
-        ++(*this);
-        return ret;
-    }
-    Mint operator--(int) {
-        Mint ret = *this;
-        --(*this);
-        return ret;
-    }
-
-    operator long long() const { return val; }
-};
-
-Mint operator+(const Mint &a, const Mint &b) {
-    long long ret = a.val + b.val;
-    if (ret >= Mint::mod) ret -= Mint::mod;
-    return Mint(ret);
-}
-Mint operator*(const Mint &a, const Mint &b) {
-    long long ret = a.val * b.val;
-    if (ret >= Mint::mod) ret %= Mint::mod;
-    return Mint(ret);
-}
-Mint operator-(const Mint &a, const Mint &b) { return a + (-b); }
-Mint operator/(const Mint &a, const Mint &b) { return a * b.inv(); }
-
-std::ostream &operator<<(std::ostream &out, const Mint &a) { return out << a.val; }
-std::istream &operator>>(std::istream &in, Mint &a) {
-    in >> a.val;
-    a.verify_value();
-    return in;
 }
 
-Mint pow(Mint a, long long b) {
-    return a.pow(b);
+// aCb
+Mint C(int a, int b) {
+    if (a < 0 || b < 0 || a < b) return 0;
+    Mint res = fact[a];
+    res *= inv[b];
+    res *= inv[a - b];
+    return res;
 }
 
-#endif  // CPLIB_LIB_MODINT_H_
+// aPb
+Mint P(int a, int b) {
+    if (a < 0 || a < b) return 0;
+    return fact[a] * inv[a - b];
+}
+
+// aHb
+Mint H(int a, int b) {
+    if (b == 0) return 1;
+    return C(a + b - 1, b);
+}
+
+#endif  // CPLIB_LIB_COMBINATORICS_H_
 
 ```
 {% endraw %}
@@ -156,6 +103,10 @@ Mint pow(Mint a, long long b) {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
+#line 1 "lib/combinatorics.hpp"
+
+
+
 #line 1 "lib/modint.hpp"
 
 
@@ -244,6 +195,43 @@ std::istream &operator>>(std::istream &in, Mint &a) {
 
 Mint pow(Mint a, long long b) {
     return a.pow(b);
+}
+
+
+#line 5 "lib/combinatorics.hpp"
+#include <vector>
+
+// Combinatorics
+constexpr int MAX_N = 2000003;
+std::vector<Mint> fact(MAX_N), inv(MAX_N);
+
+void init_fact() {
+    fact[0] = inv[0] = 1;
+    for (long long i = 1; i < MAX_N; i++) {
+        fact[i] = fact[i - 1] * Mint(i);
+        inv[i] = fact[i].inv();
+    }
+}
+
+// aCb
+Mint C(int a, int b) {
+    if (a < 0 || b < 0 || a < b) return 0;
+    Mint res = fact[a];
+    res *= inv[b];
+    res *= inv[a - b];
+    return res;
+}
+
+// aPb
+Mint P(int a, int b) {
+    if (a < 0 || a < b) return 0;
+    return fact[a] * inv[a - b];
+}
+
+// aHb
+Mint H(int a, int b) {
+    if (b == 0) return 1;
+    return C(a + b - 1, b);
 }
 
 
