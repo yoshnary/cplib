@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/lowest_common_ancestor.aoj.GRL_5_C.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-09 15:54:53+09:00
+    - Last commit date: 2020-05-09 18:52:06+09:00
 
 
 * see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/5/GRL_5_C">https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/5/GRL_5_C</a>
@@ -49,9 +49,9 @@ layout: default
 ```cpp
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/5/GRL_5_C"
 
-#include "../lib/lowest_common_ancestor.hpp"
 #include <iostream>
 #include <vector>
+#include "../lib/lowest_common_ancestor.hpp"
 
 int main() {
     int n; std::cin>> n;
@@ -88,11 +88,13 @@ int main() {
 #line 1 "test/lowest_common_ancestor.aoj.GRL_5_C.test.cpp"
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/5/GRL_5_C"
 
+#include <iostream>
+#include <vector>
 #line 1 "lib/lowest_common_ancestor.hpp"
 
 
 
-#include <vector>
+#line 5 "lib/lowest_common_ancestor.hpp"
 #include <utility>
 
 struct LowestCommonAncestor {
@@ -147,8 +149,6 @@ private:
 };
 
 
-#line 4 "test/lowest_common_ancestor.aoj.GRL_5_C.test.cpp"
-#include <iostream>
 #line 6 "test/lowest_common_ancestor.aoj.GRL_5_C.test.cpp"
 
 int main() {

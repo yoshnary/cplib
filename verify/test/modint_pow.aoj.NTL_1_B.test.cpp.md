@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/modint_pow.aoj.NTL_1_B.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-09 15:05:12+09:00
+    - Last commit date: 2020-05-09 18:52:06+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B</a>
@@ -49,8 +49,8 @@ layout: default
 ```cpp
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B"
 
-#include "../lib/modint.hpp"
 #include <iostream>
+#include "../lib/modint.hpp"
 
 int main() {
     int m, n; std::cin >> m >> n;
@@ -66,11 +66,12 @@ int main() {
 #line 1 "test/modint_pow.aoj.NTL_1_B.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B"
 
+#include <iostream>
 #line 1 "lib/modint.hpp"
 
 
 
-#include <iostream>
+#line 5 "lib/modint.hpp"
 
 // Modint
 struct Mint {

@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/topological_sort.aoj.GRL_4_B.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-09 15:27:41+09:00
+    - Last commit date: 2020-05-09 18:52:06+09:00
 
 
 * see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/4/GRL_4_B">https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/4/GRL_4_B</a>
@@ -49,9 +49,9 @@ layout: default
 ```cpp
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/4/GRL_4_B"
 
-#include "../lib/topological_sort.hpp"
 #include <iostream>
 #include <vector>
+#include "../lib/topological_sort.hpp"
 
 int main() {
     int n, m; std::cin >> n >> m;
@@ -74,11 +74,13 @@ int main() {
 #line 1 "test/topological_sort.aoj.GRL_4_B.test.cpp"
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/4/GRL_4_B"
 
+#include <iostream>
+#include <vector>
 #line 1 "lib/topological_sort.hpp"
 
 
 
-#include <vector>
+#line 5 "lib/topological_sort.hpp"
 #include <algorithm>
 
 struct TopologicalSort {
@@ -112,8 +114,6 @@ private:
 };
 
 
-#line 4 "test/topological_sort.aoj.GRL_4_B.test.cpp"
-#include <iostream>
 #line 6 "test/topological_sort.aoj.GRL_4_B.test.cpp"
 
 int main() {

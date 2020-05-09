@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/modint.aoj.DPL_5_J.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-09 14:50:14+09:00
+    - Last commit date: 2020-05-09 18:52:06+09:00
 
 
 * see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_5_J">https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_5_J</a>
@@ -49,9 +49,9 @@ layout: default
 ```cpp
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_5_J"
 
-#include "../lib/modint.hpp"
 #include <iostream>
 #include <vector>
+#include "../lib/modint.hpp"
 
 int main() {
     int n, k; std::cin >> n >> k;
@@ -76,11 +76,13 @@ int main() {
 #line 1 "test/modint.aoj.DPL_5_J.test.cpp"
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_5_J"
 
+#include <iostream>
+#include <vector>
 #line 1 "lib/modint.hpp"
 
 
 
-#include <iostream>
+#line 5 "lib/modint.hpp"
 
 // Modint
 struct Mint {
@@ -167,8 +169,7 @@ Mint pow(Mint a, long long b) {
 }
 
 
-#line 5 "test/modint.aoj.DPL_5_J.test.cpp"
-#include <vector>
+#line 6 "test/modint.aoj.DPL_5_J.test.cpp"
 
 int main() {
     int n, k; std::cin >> n >> k;
