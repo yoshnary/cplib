@@ -1,7 +1,7 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/5/GRL_5_D"
 
 #include <iostream>
-#include "../lib/euler-tour.hpp"
+#include "../lib/euler_tour.hpp"
 #include "../lib/segment_tree.hpp"
 
 int main() {
