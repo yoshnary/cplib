@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/unionfind"
 
-#include "../lib/union_find.hpp"
 #include <iostream>
+#include "../lib/union_find.hpp"
 
 int main() {
     int n, q; std::cin >> n >> q;

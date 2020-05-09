@@ -1,7 +1,7 @@
 #define PROBLEM "https://yukicoder.me/problems/no/666"
 
-#include "../lib/modint.hpp"
 #include <iostream>
+#include "../lib/modint.hpp"
 
 int main() {
     Mint a, b; std::cin >> a >> b;
