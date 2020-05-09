@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/segment_tree.aoj.DSL_2_A.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-09 15:05:12+09:00
+    - Last commit date: 2020-05-09 17:45:03+09:00
 
 
 * see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_A">https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_A</a>
@@ -54,7 +54,10 @@ layout: default
 
 int main() {
     int n, q; std::cin >> n >> q;
-    SegmentTree seg(std::vector<long long>(n, (1LL << 31) - 1));
+    auto op = [](long long a, long long b) { return std::min(a, b); };
+    SegmentTree<long long>
+        seg(std::vector<long long>(n, (1LL << 31) - 1),
+            op, (1LL << 31) - 1);
     for (int i = 0; i < q; i++) {
         int com, x, y; std::cin >> com >> x >> y;
         if (com) std::cout << seg.getval(x, y + 1) << std::endl;
@@ -78,23 +81,29 @@ int main() {
 
 #include <vector>
 #include <algorithm>
+#include <functional>
 
+// USAGE:
+// const int INF = 1e9 + 2;
+// auto op = [](int a, int b) { return std::min(a, b); };
+// SegmentTree<int> seg(m, op, INF);
+template<typename Monoid>
 class SegmentTree {
-private:
-    using Monoid = long long;
-    const Monoid INI = (long long)1e18 + 2;
-    Monoid op(Monoid a, Monoid b) {
-        return std::min(a, b);
-    }
-
 public:
-    SegmentTree(int n_) {
+    using Operator = std::function<Monoid(Monoid, Monoid)>;
+
+    SegmentTree(int n, const Operator &op, const Monoid init)
+        : op(op), init(init) {
+
         num = 1;
-        while (num < n_) num *= 2;
-        dat.resize(2 * num, INI);
+        while (num < n) num *= 2;
+        dat.resize(2 * num, init);
     }
 
-    SegmentTree(const std::vector<Monoid> &m) : SegmentTree(m.size()) {
+    SegmentTree(const std::vector<Monoid> &m,
+        const Operator &op, const Monoid init)
+        : SegmentTree(m.size(), op, init) {
+
         int n = m.size();
         for (int i = 0; i < n; i++) {
             dat[num - 1 + i] = m[i];
@@ -120,7 +129,7 @@ public:
     // Call like getval(a, b).
     Monoid getval(int a, int b, int k = 0, int left = 0, int right = -1) {
         if (right < 0) right = num;
-        if (right <= a || b <= left) return INI;
+        if (right <= a || b <= left) return init;
         if (a <= left && right <= b) return dat[k];
         Monoid vleft = getval(
             a, b, 2 * k + 1, left, left + (right - left) / 2);
@@ -132,6 +141,8 @@ public:
 private:
     int num;
     std::vector<Monoid> dat;
+    const Operator op;
+    const Monoid init;
 };
 
 
@@ -140,7 +151,10 @@ private:
 
 int main() {
     int n, q; std::cin >> n >> q;
-    SegmentTree seg(std::vector<long long>(n, (1LL << 31) - 1));
+    auto op = [](long long a, long long b) { return std::min(a, b); };
+    SegmentTree<long long>
+        seg(std::vector<long long>(n, (1LL << 31) - 1),
+            op, (1LL << 31) - 1);
     for (int i = 0; i < q; i++) {
         int com, x, y; std::cin >> com >> x >> y;
         if (com) std::cout << seg.getval(x, y + 1) << std::endl;
