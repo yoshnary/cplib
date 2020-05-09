@@ -6,6 +6,7 @@
 "test/combinatorics.aoj.DPL_5_G.test.cpp": "2020-05-09 18:52:06 +0900",
 "test/combinatorics.aoj.DPL_5_I.test.cpp": "2020-05-09 18:52:06 +0900",
 "test/euler-tour.aoj.GRL_5_D.test.cpp": "2020-05-09 19:14:08 +0900",
+"test/heavy_light_decomposition.aoj.GRL_5_E.test.cpp": "2020-05-09 20:14:54 +0900",
 "test/lazy_segment_tree.aoj.DSL_2_G.test.cpp": "2020-05-09 18:42:01 +0900",
 "test/lowest_common_ancestor.aoj.GRL_5_C.test.cpp": "2020-05-09 18:52:06 +0900",
 "test/matrix_power.yuki.1050.test.cpp": "2020-05-09 18:52:06 +0900",
