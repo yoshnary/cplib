@@ -39,6 +39,7 @@ layout: default
 ### lib
 
 * :heavy_check_mark: <a href="library/lib/combinatorics.hpp.html">lib/combinatorics.hpp</a>
+* :heavy_check_mark: <a href="library/lib/euler-tour.hpp.html">lib/euler-tour.hpp</a>
 * :heavy_check_mark: <a href="library/lib/lazy_segment_tree.hpp.html">lib/lazy_segment_tree.hpp</a>
 * :heavy_check_mark: <a href="library/lib/lowest_common_ancestor.hpp.html">lib/lowest_common_ancestor.hpp</a>
 * :heavy_check_mark: <a href="library/lib/matrix_power.hpp.html">lib/matrix_power.hpp</a>
@@ -56,6 +57,7 @@ layout: default
 * :heavy_check_mark: <a href="verify/test/combinatorics.aoj.DPL_5_F.test.cpp.html">test/combinatorics.aoj.DPL_5_F.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/combinatorics.aoj.DPL_5_G.test.cpp.html">test/combinatorics.aoj.DPL_5_G.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/combinatorics.aoj.DPL_5_I.test.cpp.html">test/combinatorics.aoj.DPL_5_I.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/euler-tour.aoj.GRL_5_D.test.cpp.html">test/euler-tour.aoj.GRL_5_D.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/lazy_segment_tree.aoj.DSL_2_G.test.cpp.html">test/lazy_segment_tree.aoj.DSL_2_G.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/lowest_common_ancestor.aoj.GRL_5_C.test.cpp.html">test/lowest_common_ancestor.aoj.GRL_5_C.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/matrix_power.yuki.1050.test.cpp.html">test/matrix_power.yuki.1050.test.cpp</a>
