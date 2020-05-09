@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/lazy_segment_tree.aoj.DSL_2_G.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-09 18:42:01+09:00
+    - Last commit date: 2020-05-09 19:52:32+09:00
 
 
 * see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_G">https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_G</a>
@@ -191,9 +191,9 @@ LazySegmentTree<long long, long long>
 make_rars_segment_tree(const std::vector<long long> &init) {
     auto mono_product = [](long long a, long long b) { return a + b; };
     const long long init_mono = 0;
-    auto op_product = [](long long a, long long b) { return a + b; };
+    auto op_product = [](long long p, long long q) { return p + q; };
     const long long init_op = 0;
-    auto act = [](long long a, int n, long long b) { return a*n + b; };
+    auto act = [](long long p, int n, long long a) { return p*n + a; };
     return LazySegmentTree<long long, long long>(
         init, mono_product, init_mono, op_product, init_op, act);
 }
