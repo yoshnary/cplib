@@ -1,8 +1,8 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_5_I"
 
+#include <iostream>
 #include "../lib/modint.hpp"
 #include "../lib/combinatorics.hpp"
-#include <iostream>
 
 int main() {
     init_fact();
