@@ -3,23 +3,29 @@
 
 #include <vector>
 #include <algorithm>
+#include <functional>
 
+// USAGE:
+// const int INF = 1e9 + 2;
+// auto op = [](int a, int b) { return std::min(a, b); };
+// SegmentTree<int> seg(m, op, INF);
+template<typename Monoid>
 class SegmentTree {
-private:
-    using Monoid = long long;
-    const Monoid INI = (long long)1e18 + 2;
-    Monoid op(Monoid a, Monoid b) {
-        return std::min(a, b);
-    }
-
 public:
-    SegmentTree(int n_) {
+    using Operator = std::function<Monoid(Monoid, Monoid)>;
+
+    SegmentTree(int n, const Operator &op, const Monoid init)
+        : op(op), init(init) {
+
         num = 1;
-        while (num < n_) num *= 2;
-        dat.resize(2 * num, INI);
+        while (num < n) num *= 2;
+        dat.resize(2 * num, init);
     }
 
-    SegmentTree(const std::vector<Monoid> &m) : SegmentTree(m.size()) {
+    SegmentTree(const std::vector<Monoid> &m,
+        const Operator &op, const Monoid init)
+        : SegmentTree(m.size(), op, init) {
+
         int n = m.size();
         for (int i = 0; i < n; i++) {
             dat[num - 1 + i] = m[i];
@@ -45,7 +51,7 @@ public:
     // Call like getval(a, b).
     Monoid getval(int a, int b, int k = 0, int left = 0, int right = -1) {
         if (right < 0) right = num;
-        if (right <= a || b <= left) return INI;
+        if (right <= a || b <= left) return init;
         if (a <= left && right <= b) return dat[k];
         Monoid vleft = getval(
             a, b, 2 * k + 1, left, left + (right - left) / 2);
@@ -57,6 +63,8 @@ public:
 private:
     int num;
     std::vector<Monoid> dat;
+    const Operator op;
+    const Monoid init;
 };
 
 #endif  // CPLIB_LIB_SEGMENT_TREE_H_
