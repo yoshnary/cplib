@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: test/modint.test.cpp
+# :heavy_check_mark: test/modint.yuki.666.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
-* <a href="{{ site.github.repository_url }}/blob/master/test/modint.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-09 03:59:38+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/test/modint.yuki.666.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2020-05-09 15:05:12+09:00
 
 
 * see: <a href="https://yukicoder.me/problems/no/666">https://yukicoder.me/problems/no/666</a>
@@ -64,7 +64,7 @@ int main() {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "test/modint.test.cpp"
+#line 1 "test/modint.yuki.666.test.cpp"
 #define PROBLEM "https://yukicoder.me/problems/no/666"
 
 #line 1 "lib/modint.hpp"
@@ -158,7 +158,7 @@ Mint pow(Mint a, long long b) {
 }
 
 
-#line 5 "test/modint.test.cpp"
+#line 5 "test/modint.yuki.666.test.cpp"
 
 int main() {
     Mint a, b; std::cin >> a >> b;

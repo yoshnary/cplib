@@ -38,7 +38,7 @@ layout: default
 
 ## Verified with
 
-* :heavy_check_mark: <a href="../../verify/test/matrix_power.test.cpp.html">test/matrix_power.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/matrix_power.yuki.1050.test.cpp.html">test/matrix_power.yuki.1050.test.cpp</a>
 
 
 ## Code

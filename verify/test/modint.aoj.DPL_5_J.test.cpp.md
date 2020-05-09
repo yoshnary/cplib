@@ -25,21 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: test/matrix_power.test.cpp
+# :heavy_check_mark: test/modint.aoj.DPL_5_J.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
-* <a href="{{ site.github.repository_url }}/blob/master/test/matrix_power.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-09 04:31:48+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/test/modint.aoj.DPL_5_J.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2020-05-09 14:50:14+09:00
 
 
-* see: <a href="https://yukicoder.me/problems/no/1050">https://yukicoder.me/problems/no/1050</a>
+* see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_5_J">https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_5_J</a>
 
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/lib/matrix_power.hpp.html">lib/matrix_power.hpp</a>
 * :heavy_check_mark: <a href="../../library/lib/modint.hpp.html">lib/modint.hpp</a>
 
 
@@ -48,23 +47,23 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#define PROBLEM "https://yukicoder.me/problems/no/1050"
+#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_5_J"
 
-#include "../lib/matrix_power.hpp"
 #include "../lib/modint.hpp"
 #include <iostream>
+#include <vector>
 
 int main() {
-    int m, k; std::cin >> m >> k;
-    Matrix<Mint> mat(m), v(m, 1);
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < m; j++) {
-            mat[(j + i) % m][j]++;
-            mat[(j * i) % m][j]++;
+    int n, k; std::cin >> n >> k;
+    std::vector<std::vector<Mint>> dp(n + 2, std::vector<Mint>(k + 2));
+    for (int i = 0; i <= k; i++) dp[0][i] = 1;
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= k; j++) {
+            dp[i][j] = dp[i][j - 1];
+            if (i >= j) dp[i][j] += dp[i - j][j];
         }
     }
-    v[0][0] = 1;
-    std::cout << matmul(matpow(mat, k), v)[0][0] << std::endl;
+    std::cout << dp[n][k] << std::endl;
     return 0;
 }
 
@@ -74,78 +73,14 @@ int main() {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "test/matrix_power.test.cpp"
-#define PROBLEM "https://yukicoder.me/problems/no/1050"
-
-#line 1 "lib/matrix_power.hpp"
-
-
-
-#include <iostream>
-#include <vector>
-#include <cassert>
-
-// Matrix power
-template<typename T>
-class Matrix {
-public:
-    Matrix(int n, int m) : dat(n, std::vector<T>(m)) {}
-    Matrix(int n, int m, T init_val) : dat(n, std::vector<T>(m, init_val)) {}
-    Matrix(int n) : Matrix(n, n) {}
-    Matrix(int n, T init_val) : Matrix(n, n, init_val) {}
-    std::vector<T> &operator[](size_t idx) { return dat[idx]; }
-    const std::vector<T> &operator[](size_t idx) const { return dat[idx]; }
-    size_t size() const { return dat.size(); }
-
-private:
-    std::vector<std::vector<T>> dat;
-};
-template<typename T>
-std::ostream &operator<<(std::ostream &out, const Matrix<T> &a) {
-    for (int i = 0; i < (int)a.size(); i++) {
-        for (int j = 0; j < (int)a[i].size(); j++) {
-            out << a[i][j] << " \n"[j == (int)a[i].size() - 1];
-        }
-    }
-    return out;
-}
-
-template<typename T>
-Matrix<T> matmul(const Matrix<T> &a, const Matrix<T> &b) {
-    int n = (int)a.size();
-    int m = (int)b[0].size();
-    int r = (int)b.size();
-    assert(a[0].size() == r);
-    Matrix<T> ret(n, m);
-    for (int i = 0; i < n; i++) {
-        for (int k = 0; k < r; k++) {
-            for (int j = 0; j < m; j++) {
-                ret[i][j] += a[i][k] * b[k][j];
-            }
-        }
-    }
-    return ret;
-}
-
-template<typename T>
-Matrix<T> matpow(Matrix<T> a, long long p) {
-    int n = (int)a.size();
-    Matrix<T> ret(n);
-    for (int i = 0; i < n; i++) ret[i][i] = 1;
-    while (p > 0) {
-        if (p & 1) ret = matmul(ret, a);
-        a = matmul(a, a);
-        p >>= 1LL;
-    }
-    return ret;
-}
-
+#line 1 "test/modint.aoj.DPL_5_J.test.cpp"
+#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_5_J"
 
 #line 1 "lib/modint.hpp"
 
 
 
-#line 5 "lib/modint.hpp"
+#include <iostream>
 
 // Modint
 struct Mint {
@@ -232,19 +167,20 @@ Mint pow(Mint a, long long b) {
 }
 
 
-#line 6 "test/matrix_power.test.cpp"
+#line 5 "test/modint.aoj.DPL_5_J.test.cpp"
+#include <vector>
 
 int main() {
-    int m, k; std::cin >> m >> k;
-    Matrix<Mint> mat(m), v(m, 1);
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < m; j++) {
-            mat[(j + i) % m][j]++;
-            mat[(j * i) % m][j]++;
+    int n, k; std::cin >> n >> k;
+    std::vector<std::vector<Mint>> dp(n + 2, std::vector<Mint>(k + 2));
+    for (int i = 0; i <= k; i++) dp[0][i] = 1;
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= k; j++) {
+            dp[i][j] = dp[i][j - 1];
+            if (i >= j) dp[i][j] += dp[i - j][j];
         }
     }
-    v[0][0] = 1;
-    std::cout << matmul(matpow(mat, k), v)[0][0] << std::endl;
+    std::cout << dp[n][k] << std::endl;
     return 0;
 }
 

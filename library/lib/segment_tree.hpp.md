@@ -38,7 +38,7 @@ layout: default
 
 ## Verified with
 
-* :heavy_check_mark: <a href="../../verify/test/segment_tree.test.cpp.html">test/segment_tree.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/segment_tree.aoj.DSL_2_A.test.cpp.html">test/segment_tree.aoj.DSL_2_A.test.cpp</a>
 
 
 ## Code

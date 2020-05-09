@@ -38,7 +38,7 @@ layout: default
 
 ## Verified with
 
-* :heavy_check_mark: <a href="../../verify/test/union_find.test.cpp.html">test/union_find.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/union_find.yosupo.unionfind.test.cpp.html">test/union_find.yosupo.unionfind.test.cpp</a>
 
 
 ## Code

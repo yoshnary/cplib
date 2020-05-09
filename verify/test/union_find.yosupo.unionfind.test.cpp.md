@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: test/union_find.test.cpp
+# :heavy_check_mark: test/union_find.yosupo.unionfind.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
-* <a href="{{ site.github.repository_url }}/blob/master/test/union_find.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-09 04:18:10+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/test/union_find.yosupo.unionfind.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2020-05-09 15:05:12+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/unionfind">https://judge.yosupo.jp/problem/unionfind</a>
@@ -69,7 +69,7 @@ int main() {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "test/union_find.test.cpp"
+#line 1 "test/union_find.yosupo.unionfind.test.cpp"
 #define PROBLEM "https://judge.yosupo.jp/problem/unionfind"
 
 #line 1 "lib/union_find.hpp"
@@ -120,7 +120,7 @@ private:
 };
 
 
-#line 4 "test/union_find.test.cpp"
+#line 4 "test/union_find.yosupo.unionfind.test.cpp"
 #include <iostream>
 
 int main() {
