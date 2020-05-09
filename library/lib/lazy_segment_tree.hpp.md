@@ -38,6 +38,7 @@ layout: default
 
 ## Verified with
 
+* :heavy_check_mark: <a href="../../verify/test/heavy_light_decomposition.aoj.GRL_5_E.test.cpp.html">test/heavy_light_decomposition.aoj.GRL_5_E.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/test/lazy_segment_tree.aoj.DSL_2_G.test.cpp.html">test/lazy_segment_tree.aoj.DSL_2_G.test.cpp</a>
 
 
