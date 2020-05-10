@@ -40,6 +40,7 @@ layout: default
 
 * :heavy_check_mark: <a href="library/lib/combinatorics.hpp.html">lib/combinatorics.hpp</a>
 * :heavy_check_mark: <a href="library/lib/euler_tour.hpp.html">lib/euler_tour.hpp</a>
+* :heavy_check_mark: <a href="library/lib/extgcd.hpp.html">lib/extgcd.hpp</a>
 * :heavy_check_mark: <a href="library/lib/heavy_light_decomposition.hpp.html">lib/heavy_light_decomposition.hpp</a>
 * :heavy_check_mark: <a href="library/lib/lazy_segment_tree.hpp.html">lib/lazy_segment_tree.hpp</a>
 * :heavy_check_mark: <a href="library/lib/lowest_common_ancestor.hpp.html">lib/lowest_common_ancestor.hpp</a>
@@ -59,6 +60,7 @@ layout: default
 * :heavy_check_mark: <a href="verify/test/combinatorics.aoj.DPL_5_G.test.cpp.html">test/combinatorics.aoj.DPL_5_G.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/combinatorics.aoj.DPL_5_I.test.cpp.html">test/combinatorics.aoj.DPL_5_I.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/euler_tour.aoj.GRL_5_D.test.cpp.html">test/euler_tour.aoj.GRL_5_D.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/extgcd.aoj.NTL_1_E.test.cpp.html">test/extgcd.aoj.NTL_1_E.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/heavy_light_decomposition.aoj.3037.test.cpp.html">test/heavy_light_decomposition.aoj.3037.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/heavy_light_decomposition.aoj.GRL_5_E.test.cpp.html">test/heavy_light_decomposition.aoj.GRL_5_E.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/lazy_segment_tree.aoj.DSL_2_G.test.cpp.html">test/lazy_segment_tree.aoj.DSL_2_G.test.cpp</a>
