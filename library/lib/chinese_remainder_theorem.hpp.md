@@ -25,26 +25,25 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: lib/extgcd.hpp
+# :heavy_check_mark: lib/chinese_remainder_theorem.hpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#e8acc63b1e238f3255c900eed37254b8">lib</a>
-* <a href="{{ site.github.repository_url }}/blob/master/lib/extgcd.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-10 11:45:22+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/lib/chinese_remainder_theorem.hpp">View this file on GitHub</a>
+    - Last commit date: 2020-05-10 13:15:42+09:00
 
 
 
 
-## Required by
+## Depends on
 
-* :heavy_check_mark: <a href="chinese_remainder_theorem.hpp.html">lib/chinese_remainder_theorem.hpp</a>
+* :heavy_check_mark: <a href="extgcd.hpp.html">lib/extgcd.hpp</a>
 
 
 ## Verified with
 
 * :heavy_check_mark: <a href="../../verify/test/chinese_remainder_theorem.yuki.447.test.cpp.html">test/chinese_remainder_theorem.yuki.447.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/test/extgcd.aoj.NTL_1_E.test.cpp.html">test/extgcd.aoj.NTL_1_E.test.cpp</a>
 
 
 ## Code
@@ -52,11 +51,49 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#ifndef CPLIB_LIB_EXTGCD_H_
-#define CPLIB_LIB_EXTGCD_H_
+#ifndef CPLIB_LIB_CHINESE_REMAINDER_THEOREM_H_
+#define CPLIB_LIB_CHINESE_REMAINDER_THEOREM_H_
+
+#include <utility>
+#include "../lib/extgcd.hpp"
+
+// Chinese Remainder Theorem
+// Find rem such that 0 <= rem < lcm(m1, m2) and
+// rem % m1 = r1 and rem % m2 = r2
+// Return { -1, -1 } if such rem doesn't exist,
+// otherwise return { lcm(m1, m2), rem }
+std::pair<long long, long long>
+crt(long long m1, long long r1, long long m2, long long r2) {
+    long long x = 0, y = 0;
+    long long d = extgcd(m1, m2, x, y);
+    if (r1%d != r2%d) {
+        return { -1, -1 };
+    }
+    long long lcm = m1 / d * m2;
+    long long rem = ((r2 - r1) / d * x % (m2 / d)) * m1;
+    rem = ((rem + r1) % lcm + lcm) % lcm;
+    return { lcm, rem };
+}
+
+#endif  // CPLIB_LIB_CHINESE_REMAINDER_THEOREM_H_
+
+```
+{% endraw %}
+
+<a id="bundled"></a>
+{% raw %}
+```cpp
+#line 1 "lib/chinese_remainder_theorem.hpp"
+
+
+
+#include <utility>
+#line 1 "lib/extgcd.hpp"
+
+
 
 #include <tuple>
-#include <utility>
+#line 6 "lib/extgcd.hpp"
 
 // Find x and y such that a*x + b*y = gcd(a, b)
 // Return gcd(a, b)
@@ -70,31 +107,25 @@ long long extgcd(long long a, long long b, long long &x, long long &y) {
     return ret;
 }
 
-#endif  // CPLIB_LIB_EXTGCD_H_
 
-```
-{% endraw %}
+#line 6 "lib/chinese_remainder_theorem.hpp"
 
-<a id="bundled"></a>
-{% raw %}
-```cpp
-#line 1 "lib/extgcd.hpp"
-
-
-
-#include <tuple>
-#include <utility>
-
-// Find x and y such that a*x + b*y = gcd(a, b)
-// Return gcd(a, b)
-long long extgcd(long long a, long long b, long long &x, long long &y) {
-    if (b == 0) {
-        x = 1, y = 0;
-        return a;
+// Chinese Remainder Theorem
+// Find rem such that 0 <= rem < lcm(m1, m2) and
+// rem % m1 = r1 and rem % m2 = r2
+// Return { -1, -1 } if such rem doesn't exist,
+// otherwise return { lcm(m1, m2), rem }
+std::pair<long long, long long>
+crt(long long m1, long long r1, long long m2, long long r2) {
+    long long x = 0, y = 0;
+    long long d = extgcd(m1, m2, x, y);
+    if (r1%d != r2%d) {
+        return { -1, -1 };
     }
-    long long ret = extgcd(b, a%b, x, y);
-    std::tie(x, y) = std::make_pair(y, x - a / b * y);
-    return ret;
+    long long lcm = m1 / d * m2;
+    long long rem = ((r2 - r1) / d * x % (m2 / d)) * m1;
+    rem = ((rem + r1) % lcm + lcm) % lcm;
+    return { lcm, rem };
 }
 
 

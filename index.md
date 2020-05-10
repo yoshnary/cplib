@@ -38,6 +38,7 @@ layout: default
 
 ### lib
 
+* :heavy_check_mark: <a href="library/lib/chinese_remainder_theorem.hpp.html">lib/chinese_remainder_theorem.hpp</a>
 * :heavy_check_mark: <a href="library/lib/combinatorics.hpp.html">lib/combinatorics.hpp</a>
 * :heavy_check_mark: <a href="library/lib/euler_tour.hpp.html">lib/euler_tour.hpp</a>
 * :heavy_check_mark: <a href="library/lib/extgcd.hpp.html">lib/extgcd.hpp</a>
@@ -53,6 +54,7 @@ layout: default
 
 ## Verify Files
 
+* :heavy_check_mark: <a href="verify/test/chinese_remainder_theorem.yuki.447.test.cpp.html">test/chinese_remainder_theorem.yuki.447.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/combinatorics.aoj.DPL_5_C.test.cpp.html">test/combinatorics.aoj.DPL_5_C.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/combinatorics.aoj.DPL_5_D.test.cpp.html">test/combinatorics.aoj.DPL_5_D.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/combinatorics.aoj.DPL_5_E.test.cpp.html">test/combinatorics.aoj.DPL_5_E.test.cpp</a>
