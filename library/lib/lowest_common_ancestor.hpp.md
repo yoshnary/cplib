@@ -38,6 +38,7 @@ layout: default
 
 ## Verified with
 
+* :heavy_check_mark: <a href="../../verify/test/heavy_light_decomposition.aoj.3037.test.cpp.html">test/heavy_light_decomposition.aoj.3037.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/test/lowest_common_ancestor.aoj.GRL_5_C.test.cpp.html">test/lowest_common_ancestor.aoj.GRL_5_C.test.cpp</a>
 
 
