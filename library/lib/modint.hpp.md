@@ -38,17 +38,17 @@ layout: default
 
 ## Required by
 
-* :heavy_check_mark: <a href="combinatorics.hpp.html">lib/combinatorics.hpp</a>
+* :heavy_check_mark: <a href="combination.hpp.html">lib/combination.hpp</a>
 
 
 ## Verified with
 
-* :heavy_check_mark: <a href="../../verify/test/combinatorics.aoj.DPL_5_C.test.cpp.html">test/combinatorics.aoj.DPL_5_C.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/test/combinatorics.aoj.DPL_5_D.test.cpp.html">test/combinatorics.aoj.DPL_5_D.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/test/combinatorics.aoj.DPL_5_E.test.cpp.html">test/combinatorics.aoj.DPL_5_E.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/test/combinatorics.aoj.DPL_5_F.test.cpp.html">test/combinatorics.aoj.DPL_5_F.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/test/combinatorics.aoj.DPL_5_G.test.cpp.html">test/combinatorics.aoj.DPL_5_G.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/test/combinatorics.aoj.DPL_5_I.test.cpp.html">test/combinatorics.aoj.DPL_5_I.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/combination.aoj.DPL_5_C.test.cpp.html">test/combination.aoj.DPL_5_C.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/combination.aoj.DPL_5_D.test.cpp.html">test/combination.aoj.DPL_5_D.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/combination.aoj.DPL_5_E.test.cpp.html">test/combination.aoj.DPL_5_E.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/combination.aoj.DPL_5_F.test.cpp.html">test/combination.aoj.DPL_5_F.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/combination.aoj.DPL_5_G.test.cpp.html">test/combination.aoj.DPL_5_G.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/combination.aoj.DPL_5_I.test.cpp.html">test/combination.aoj.DPL_5_I.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/test/matrix_power.yuki.1050.test.cpp.html">test/matrix_power.yuki.1050.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/test/modint.aoj.DPL_5_B.test.cpp.html">test/modint.aoj.DPL_5_B.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/test/modint.aoj.DPL_5_J.test.cpp.html">test/modint.aoj.DPL_5_J.test.cpp</a>

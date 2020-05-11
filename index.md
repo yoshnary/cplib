@@ -39,7 +39,7 @@ layout: default
 ### lib
 
 * :heavy_check_mark: <a href="library/lib/chinese_remainder_theorem.hpp.html">lib/chinese_remainder_theorem.hpp</a>
-* :heavy_check_mark: <a href="library/lib/combinatorics.hpp.html">lib/combinatorics.hpp</a>
+* :heavy_check_mark: <a href="library/lib/combination.hpp.html">lib/combination.hpp</a>
 * :heavy_check_mark: <a href="library/lib/euler_tour.hpp.html">lib/euler_tour.hpp</a>
 * :heavy_check_mark: <a href="library/lib/extgcd.hpp.html">lib/extgcd.hpp</a>
 * :heavy_check_mark: <a href="library/lib/heavy_light_decomposition.hpp.html">lib/heavy_light_decomposition.hpp</a>
@@ -55,12 +55,12 @@ layout: default
 ## Verify Files
 
 * :heavy_check_mark: <a href="verify/test/chinese_remainder_theorem.yuki.447.test.cpp.html">test/chinese_remainder_theorem.yuki.447.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/combinatorics.aoj.DPL_5_C.test.cpp.html">test/combinatorics.aoj.DPL_5_C.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/combinatorics.aoj.DPL_5_D.test.cpp.html">test/combinatorics.aoj.DPL_5_D.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/combinatorics.aoj.DPL_5_E.test.cpp.html">test/combinatorics.aoj.DPL_5_E.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/combinatorics.aoj.DPL_5_F.test.cpp.html">test/combinatorics.aoj.DPL_5_F.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/combinatorics.aoj.DPL_5_G.test.cpp.html">test/combinatorics.aoj.DPL_5_G.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/combinatorics.aoj.DPL_5_I.test.cpp.html">test/combinatorics.aoj.DPL_5_I.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/combination.aoj.DPL_5_C.test.cpp.html">test/combination.aoj.DPL_5_C.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/combination.aoj.DPL_5_D.test.cpp.html">test/combination.aoj.DPL_5_D.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/combination.aoj.DPL_5_E.test.cpp.html">test/combination.aoj.DPL_5_E.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/combination.aoj.DPL_5_F.test.cpp.html">test/combination.aoj.DPL_5_F.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/combination.aoj.DPL_5_G.test.cpp.html">test/combination.aoj.DPL_5_G.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/combination.aoj.DPL_5_I.test.cpp.html">test/combination.aoj.DPL_5_I.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/euler_tour.aoj.GRL_5_D.test.cpp.html">test/euler_tour.aoj.GRL_5_D.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/extgcd.aoj.NTL_1_E.test.cpp.html">test/extgcd.aoj.NTL_1_E.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/heavy_light_decomposition.aoj.3037.test.cpp.html">test/heavy_light_decomposition.aoj.3037.test.cpp</a>

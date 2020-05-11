@@ -25,22 +25,30 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: test/combinatorics.aoj.DPL_5_D.test.cpp
+# :heavy_check_mark: lib/combination.hpp
 
 <a href="../../index.html">Back to top page</a>
 
-* category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
-* <a href="{{ site.github.repository_url }}/blob/master/test/combinatorics.aoj.DPL_5_D.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-09 18:52:06+09:00
+* category: <a href="../../index.html#e8acc63b1e238f3255c900eed37254b8">lib</a>
+* <a href="{{ site.github.repository_url }}/blob/master/lib/combination.hpp">View this file on GitHub</a>
+    - Last commit date: 2020-05-11 16:48:57+09:00
 
 
-* see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_5_D">https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_5_D</a>
 
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/lib/combinatorics.hpp.html">lib/combinatorics.hpp</a>
-* :heavy_check_mark: <a href="../../library/lib/modint.hpp.html">lib/modint.hpp</a>
+* :heavy_check_mark: <a href="modint.hpp.html">lib/modint.hpp</a>
+
+
+## Verified with
+
+* :heavy_check_mark: <a href="../../verify/test/combination.aoj.DPL_5_C.test.cpp.html">test/combination.aoj.DPL_5_C.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/combination.aoj.DPL_5_D.test.cpp.html">test/combination.aoj.DPL_5_D.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/combination.aoj.DPL_5_E.test.cpp.html">test/combination.aoj.DPL_5_E.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/combination.aoj.DPL_5_F.test.cpp.html">test/combination.aoj.DPL_5_F.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/combination.aoj.DPL_5_G.test.cpp.html">test/combination.aoj.DPL_5_G.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/combination.aoj.DPL_5_I.test.cpp.html">test/combination.aoj.DPL_5_I.test.cpp</a>
 
 
 ## Code
@@ -48,18 +56,46 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_5_D"
+#ifndef CPLIB_LIB_COMBINATORICS_H_
+#define CPLIB_LIB_COMBINATORICS_H_
 
-#include <iostream>
 #include "../lib/modint.hpp"
-#include "../lib/combinatorics.hpp"
+#include <vector>
 
-int main() {
-    init_fact();
-    int n, k; std::cin >> n >> k;
-    std::cout << H(k, n) << std::endl;
-    return 0;
+// Combinatorics
+constexpr int MAX_N = 2000003;
+std::vector<Mint> fact(MAX_N), inv(MAX_N);
+
+void init_fact() {
+    fact[0] = inv[0] = 1;
+    for (long long i = 1; i < MAX_N; i++) {
+        fact[i] = fact[i - 1] * Mint(i);
+        inv[i] = fact[i].inv();
+    }
 }
+
+// aCb
+Mint C(int a, int b) {
+    if (a < 0 || b < 0 || a < b) return 0;
+    Mint res = fact[a];
+    res *= inv[b];
+    res *= inv[a - b];
+    return res;
+}
+
+// aPb
+Mint P(int a, int b) {
+    if (a < 0 || a < b) return 0;
+    return fact[a] * inv[a - b];
+}
+
+// aHb
+Mint H(int a, int b) {
+    if (b == 0) return 1;
+    return C(a + b - 1, b);
+}
+
+#endif  // CPLIB_LIB_COMBINATORICS_H_
 
 ```
 {% endraw %}
@@ -67,15 +103,15 @@ int main() {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "test/combinatorics.aoj.DPL_5_D.test.cpp"
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_5_D"
+#line 1 "lib/combination.hpp"
 
-#include <iostream>
+
+
 #line 1 "lib/modint.hpp"
 
 
 
-#line 5 "lib/modint.hpp"
+#include <iostream>
 
 // Modint
 struct Mint {
@@ -162,11 +198,7 @@ Mint pow(Mint a, long long b) {
 }
 
 
-#line 1 "lib/combinatorics.hpp"
-
-
-
-#line 5 "lib/combinatorics.hpp"
+#line 5 "lib/combination.hpp"
 #include <vector>
 
 // Combinatorics
@@ -203,14 +235,6 @@ Mint H(int a, int b) {
 }
 
 
-#line 6 "test/combinatorics.aoj.DPL_5_D.test.cpp"
-
-int main() {
-    init_fact();
-    int n, k; std::cin >> n >> k;
-    std::cout << H(k, n) << std::endl;
-    return 0;
-}
 
 ```
 {% endraw %}

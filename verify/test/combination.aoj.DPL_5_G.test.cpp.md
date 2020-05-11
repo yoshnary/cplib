@@ -25,30 +25,22 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: lib/combinatorics.hpp
+# :heavy_check_mark: test/combination.aoj.DPL_5_G.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
-* category: <a href="../../index.html#e8acc63b1e238f3255c900eed37254b8">lib</a>
-* <a href="{{ site.github.repository_url }}/blob/master/lib/combinatorics.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-09 05:42:03+09:00
+* category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
+* <a href="{{ site.github.repository_url }}/blob/master/test/combination.aoj.DPL_5_G.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2020-05-11 16:48:57+09:00
 
 
+* see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_5_G">https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_5_G</a>
 
 
 ## Depends on
 
-* :heavy_check_mark: <a href="modint.hpp.html">lib/modint.hpp</a>
-
-
-## Verified with
-
-* :heavy_check_mark: <a href="../../verify/test/combinatorics.aoj.DPL_5_C.test.cpp.html">test/combinatorics.aoj.DPL_5_C.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/test/combinatorics.aoj.DPL_5_D.test.cpp.html">test/combinatorics.aoj.DPL_5_D.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/test/combinatorics.aoj.DPL_5_E.test.cpp.html">test/combinatorics.aoj.DPL_5_E.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/test/combinatorics.aoj.DPL_5_F.test.cpp.html">test/combinatorics.aoj.DPL_5_F.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/test/combinatorics.aoj.DPL_5_G.test.cpp.html">test/combinatorics.aoj.DPL_5_G.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/test/combinatorics.aoj.DPL_5_I.test.cpp.html">test/combinatorics.aoj.DPL_5_I.test.cpp</a>
+* :heavy_check_mark: <a href="../../library/lib/combination.hpp.html">lib/combination.hpp</a>
+* :heavy_check_mark: <a href="../../library/lib/modint.hpp.html">lib/modint.hpp</a>
 
 
 ## Code
@@ -56,46 +48,27 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#ifndef CPLIB_LIB_COMBINATORICS_H_
-#define CPLIB_LIB_COMBINATORICS_H_
+#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_5_G"
 
+#include <iostream>
 #include "../lib/modint.hpp"
-#include <vector>
+#include "../lib/combination.hpp"
 
-// Combinatorics
-constexpr int MAX_N = 2000003;
-std::vector<Mint> fact(MAX_N), inv(MAX_N);
-
-void init_fact() {
-    fact[0] = inv[0] = 1;
-    for (long long i = 1; i < MAX_N; i++) {
-        fact[i] = fact[i - 1] * Mint(i);
-        inv[i] = fact[i].inv();
+int main() {
+    init_fact();
+    int n, k; std::cin >> n >> k;
+    Mint ans = 0;
+    for (int j = 1; j <= k; j++) {
+        Mint cnt = 0;
+        for (int i = 0; i < j; i++) {
+            cnt += Mint(i&1 ? -1 : 1)*C(j, i)*pow(Mint(j - i), (long long)n);
+        }
+        cnt *= inv[j];
+        ans += cnt;
     }
+    std::cout << ans << std::endl;
+    return 0;
 }
-
-// aCb
-Mint C(int a, int b) {
-    if (a < 0 || b < 0 || a < b) return 0;
-    Mint res = fact[a];
-    res *= inv[b];
-    res *= inv[a - b];
-    return res;
-}
-
-// aPb
-Mint P(int a, int b) {
-    if (a < 0 || a < b) return 0;
-    return fact[a] * inv[a - b];
-}
-
-// aHb
-Mint H(int a, int b) {
-    if (b == 0) return 1;
-    return C(a + b - 1, b);
-}
-
-#endif  // CPLIB_LIB_COMBINATORICS_H_
 
 ```
 {% endraw %}
@@ -103,15 +76,15 @@ Mint H(int a, int b) {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "lib/combinatorics.hpp"
+#line 1 "test/combination.aoj.DPL_5_G.test.cpp"
+#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_5_G"
 
-
-
+#include <iostream>
 #line 1 "lib/modint.hpp"
 
 
 
-#include <iostream>
+#line 5 "lib/modint.hpp"
 
 // Modint
 struct Mint {
@@ -198,7 +171,11 @@ Mint pow(Mint a, long long b) {
 }
 
 
-#line 5 "lib/combinatorics.hpp"
+#line 1 "lib/combination.hpp"
+
+
+
+#line 5 "lib/combination.hpp"
 #include <vector>
 
 // Combinatorics
@@ -235,6 +212,23 @@ Mint H(int a, int b) {
 }
 
 
+#line 6 "test/combination.aoj.DPL_5_G.test.cpp"
+
+int main() {
+    init_fact();
+    int n, k; std::cin >> n >> k;
+    Mint ans = 0;
+    for (int j = 1; j <= k; j++) {
+        Mint cnt = 0;
+        for (int i = 0; i < j; i++) {
+            cnt += Mint(i&1 ? -1 : 1)*C(j, i)*pow(Mint(j - i), (long long)n);
+        }
+        cnt *= inv[j];
+        ans += cnt;
+    }
+    std::cout << ans << std::endl;
+    return 0;
+}
 
 ```
 {% endraw %}

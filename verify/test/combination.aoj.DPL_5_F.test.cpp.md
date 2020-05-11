@@ -25,21 +25,21 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: test/combinatorics.aoj.DPL_5_C.test.cpp
+# :heavy_check_mark: test/combination.aoj.DPL_5_F.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
-* <a href="{{ site.github.repository_url }}/blob/master/test/combinatorics.aoj.DPL_5_C.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-09 18:52:06+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/test/combination.aoj.DPL_5_F.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2020-05-11 16:48:57+09:00
 
 
-* see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_5_C">https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_5_C</a>
+* see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_5_F">https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_5_F</a>
 
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/lib/combinatorics.hpp.html">lib/combinatorics.hpp</a>
+* :heavy_check_mark: <a href="../../library/lib/combination.hpp.html">lib/combination.hpp</a>
 * :heavy_check_mark: <a href="../../library/lib/modint.hpp.html">lib/modint.hpp</a>
 
 
@@ -48,20 +48,16 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_5_C"
+#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_5_F"
 
 #include <iostream>
 #include "../lib/modint.hpp"
-#include "../lib/combinatorics.hpp"
+#include "../lib/combination.hpp"
 
 int main() {
     init_fact();
     int n, k; std::cin >> n >> k;
-    Mint ans = pow(Mint(k), (long long)n);
-    for (int i = 1; i < k; i++) {
-        ans += Mint(i&1 ? -1 : 1)*C(k, i)*pow(Mint(k - i), (long long)n);
-    }
-    std::cout << ans << std::endl;
+    std::cout << H(k, n - k) << std::endl;
     return 0;
 }
 
@@ -71,8 +67,8 @@ int main() {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "test/combinatorics.aoj.DPL_5_C.test.cpp"
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_5_C"
+#line 1 "test/combination.aoj.DPL_5_F.test.cpp"
+#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_5_F"
 
 #include <iostream>
 #line 1 "lib/modint.hpp"
@@ -166,11 +162,11 @@ Mint pow(Mint a, long long b) {
 }
 
 
-#line 1 "lib/combinatorics.hpp"
+#line 1 "lib/combination.hpp"
 
 
 
-#line 5 "lib/combinatorics.hpp"
+#line 5 "lib/combination.hpp"
 #include <vector>
 
 // Combinatorics
@@ -207,16 +203,12 @@ Mint H(int a, int b) {
 }
 
 
-#line 6 "test/combinatorics.aoj.DPL_5_C.test.cpp"
+#line 6 "test/combination.aoj.DPL_5_F.test.cpp"
 
 int main() {
     init_fact();
     int n, k; std::cin >> n >> k;
-    Mint ans = pow(Mint(k), (long long)n);
-    for (int i = 1; i < k; i++) {
-        ans += Mint(i&1 ? -1 : 1)*C(k, i)*pow(Mint(k - i), (long long)n);
-    }
-    std::cout << ans << std::endl;
+    std::cout << H(k, n - k) << std::endl;
     return 0;
 }
 
