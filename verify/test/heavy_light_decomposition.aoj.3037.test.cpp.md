@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/heavy_light_decomposition.aoj.3037.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-10 11:18:49+09:00
+    - Last commit date: 2020-05-11 17:18:45+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=3037">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=3037</a>
@@ -323,10 +323,6 @@ private:
 #include <algorithm>
 #include <functional>
 
-// USAGE:
-// const int INF = 1e9 + 2;
-// auto op = [](int a, int b) { return std::min(a, b); };
-// SegmentTree<int> seg(m, op, INF);
 template<typename Monoid>
 class SegmentTree {
 public:
@@ -384,6 +380,13 @@ private:
     const Operator op;
     const Monoid init;
 };
+
+// Example: Range-Minimum Point-Update Segment Tree
+SegmentTree<int> make_rmpu_segment_tree(const std::vector<int> &init) {
+    const int INF = 1e9 + 2;
+    auto op = [](int a, int b) { return std::min(a, b); };
+    return SegmentTree<int>(init, op, INF);
+}
 
 
 #line 11 "test/heavy_light_decomposition.aoj.3037.test.cpp"

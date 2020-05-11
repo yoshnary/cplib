@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8acc63b1e238f3255c900eed37254b8">lib</a>
 * <a href="{{ site.github.repository_url }}/blob/master/lib/segment_tree.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-09 17:45:03+09:00
+    - Last commit date: 2020-05-11 17:18:45+09:00
 
 
 
@@ -55,10 +55,6 @@ layout: default
 #include <algorithm>
 #include <functional>
 
-// USAGE:
-// const int INF = 1e9 + 2;
-// auto op = [](int a, int b) { return std::min(a, b); };
-// SegmentTree<int> seg(m, op, INF);
 template<typename Monoid>
 class SegmentTree {
 public:
@@ -116,6 +112,13 @@ private:
     const Operator op;
     const Monoid init;
 };
+
+// Example: Range-Minimum Point-Update Segment Tree
+SegmentTree<int> make_rmpu_segment_tree(const std::vector<int> &init) {
+    const int INF = 1e9 + 2;
+    auto op = [](int a, int b) { return std::min(a, b); };
+    return SegmentTree<int>(init, op, INF);
+}
 
 #endif  // CPLIB_LIB_SEGMENT_TREE_H_
 
@@ -133,10 +136,6 @@ private:
 #include <algorithm>
 #include <functional>
 
-// USAGE:
-// const int INF = 1e9 + 2;
-// auto op = [](int a, int b) { return std::min(a, b); };
-// SegmentTree<int> seg(m, op, INF);
 template<typename Monoid>
 class SegmentTree {
 public:
@@ -194,6 +193,13 @@ private:
     const Operator op;
     const Monoid init;
 };
+
+// Example: Range-Minimum Point-Update Segment Tree
+SegmentTree<int> make_rmpu_segment_tree(const std::vector<int> &init) {
+    const int INF = 1e9 + 2;
+    auto op = [](int a, int b) { return std::min(a, b); };
+    return SegmentTree<int>(init, op, INF);
+}
 
 
 

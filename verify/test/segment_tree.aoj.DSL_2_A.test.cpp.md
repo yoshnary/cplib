@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/segment_tree.aoj.DSL_2_A.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-09 18:52:06+09:00
+    - Last commit date: 2020-05-11 17:18:45+09:00
 
 
 * see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_A">https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_A</a>
@@ -84,10 +84,6 @@ int main() {
 #include <algorithm>
 #include <functional>
 
-// USAGE:
-// const int INF = 1e9 + 2;
-// auto op = [](int a, int b) { return std::min(a, b); };
-// SegmentTree<int> seg(m, op, INF);
 template<typename Monoid>
 class SegmentTree {
 public:
@@ -145,6 +141,13 @@ private:
     const Operator op;
     const Monoid init;
 };
+
+// Example: Range-Minimum Point-Update Segment Tree
+SegmentTree<int> make_rmpu_segment_tree(const std::vector<int> &init) {
+    const int INF = 1e9 + 2;
+    auto op = [](int a, int b) { return std::min(a, b); };
+    return SegmentTree<int>(init, op, INF);
+}
 
 
 #line 5 "test/segment_tree.aoj.DSL_2_A.test.cpp"
