@@ -5,10 +5,6 @@
 #include <algorithm>
 #include <functional>
 
-// USAGE:
-// const int INF = 1e9 + 2;
-// auto op = [](int a, int b) { return std::min(a, b); };
-// SegmentTree<int> seg(m, op, INF);
 template<typename Monoid>
 class SegmentTree {
 public:
@@ -66,5 +62,12 @@ private:
     const Operator op;
     const Monoid init;
 };
+
+// Example: Range-Minimum Point-Update Segment Tree
+SegmentTree<int> make_rmpu_segment_tree(const std::vector<int> &init) {
+    const int INF = 1e9 + 2;
+    auto op = [](int a, int b) { return std::min(a, b); };
+    return SegmentTree<int>(init, op, INF);
+}
 
 #endif  // CPLIB_LIB_SEGMENT_TREE_H_
