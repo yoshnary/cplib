@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include "../lib/modint.hpp"
-#include "../lib/combinatorics.hpp"
+#include "../lib/combination.hpp"
 
 int main() {
     init_fact();
