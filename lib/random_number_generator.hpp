@@ -25,7 +25,7 @@ public:
     }
 
     void set_seed(int s) { seed = s; mt = decltype(mt)(seed); }
-    int get_seed() const { return seed; }
+    long long get_seed() const { return seed; }
 
 private:
     long long seed;
