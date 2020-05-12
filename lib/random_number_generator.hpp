@@ -28,7 +28,7 @@ public:
     int get_seed() const { return seed; }
 
 private:
-    int seed;
+    long long seed;
     std::mt19937_64 mt;
 };
 
