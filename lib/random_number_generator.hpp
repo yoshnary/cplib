@@ -12,7 +12,7 @@ public:
 
     long long operator()() { return mt(); }
 
-    // [lo, hi)
+    // Generate a random integer in a range [lo, hi).
     long long operator()(long long lo, long long hi = -1) {
         if (hi == -1) {
             hi = lo;
