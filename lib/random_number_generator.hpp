@@ -10,15 +10,18 @@ public:
         : seed(std::chrono::steady_clock::now().time_since_epoch().count())
         , mt(seed) {}
 
-    long long operator()() { return mt(); }
+    unsigned long long operator()() { return mt(); }
 
     // Generate a random integer in a range [lo, hi).
-    long long operator()(long long lo, long long hi = -1) {
+    unsigned long long operator()(
+        unsigned long long lo, unsigned long long hi = -1) {
+
         if (hi == -1) {
             hi = lo;
             lo = 0;
         }
-        return std::uniform_int_distribution<long long>(lo, hi - 1)(mt);
+        std::uniform_int_distribution<unsigned long long> dist(lo, hi - 1);
+        return dist(mt);
     }
 
     void set_seed(int s) { seed = s; mt = decltype(mt)(seed); }
