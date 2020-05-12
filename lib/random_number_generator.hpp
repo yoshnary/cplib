@@ -7,7 +7,7 @@
 class RandomNumberGenerator {
 public:
     RandomNumberGenerator()
-        : seed(chrono::steady_clock::now().time_since_epoch().count())
+        : seed(std::chrono::steady_clock::now().time_since_epoch().count())
         , mt(seed) {}
 
     long long operator()() { return mt(); }
