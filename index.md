@@ -47,6 +47,7 @@ layout: default
 * :heavy_check_mark: <a href="library/lib/lowest_common_ancestor.hpp.html">lib/lowest_common_ancestor.hpp</a>
 * :heavy_check_mark: <a href="library/lib/matrix_power.hpp.html">lib/matrix_power.hpp</a>
 * :heavy_check_mark: <a href="library/lib/modint.hpp.html">lib/modint.hpp</a>
+* :warning: <a href="library/lib/random_number_generator.hpp.html">lib/random_number_generator.hpp</a>
 * :heavy_check_mark: <a href="library/lib/segment_tree.hpp.html">lib/segment_tree.hpp</a>
 * :heavy_check_mark: <a href="library/lib/topological_sort.hpp.html">lib/topological_sort.hpp</a>
 * :heavy_check_mark: <a href="library/lib/union_find.hpp.html">lib/union_find.hpp</a>
