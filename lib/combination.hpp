@@ -4,7 +4,6 @@
 #include "../lib/modint.hpp"
 #include <vector>
 
-// Combinatorics
 constexpr int MAX_N = 2000003;
 std::vector<Mint> fact(MAX_N), inv(MAX_N);
 
