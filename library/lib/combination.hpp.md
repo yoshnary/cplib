@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8acc63b1e238f3255c900eed37254b8">lib</a>
 * <a href="{{ site.github.repository_url }}/blob/master/lib/combination.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-11 16:48:57+09:00
+    - Last commit date: 2020-05-13 18:08:04+09:00
 
 
 
@@ -56,13 +56,12 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#ifndef CPLIB_LIB_COMBINATORICS_H_
-#define CPLIB_LIB_COMBINATORICS_H_
+#ifndef CPLIB_LIB_COMBINATION_H_
+#define CPLIB_LIB_COMBINATION_H_
 
 #include "../lib/modint.hpp"
 #include <vector>
 
-// Combinatorics
 constexpr int MAX_N = 2000003;
 std::vector<Mint> fact(MAX_N), inv(MAX_N);
 
@@ -95,7 +94,7 @@ Mint H(int a, int b) {
     return C(a + b - 1, b);
 }
 
-#endif  // CPLIB_LIB_COMBINATORICS_H_
+#endif  // CPLIB_LIB_COMBINATION_H_
 
 ```
 {% endraw %}
@@ -201,7 +200,6 @@ Mint pow(Mint a, long long b) {
 #line 5 "lib/combination.hpp"
 #include <vector>
 
-// Combinatorics
 constexpr int MAX_N = 2000003;
 std::vector<Mint> fact(MAX_N), inv(MAX_N);
 

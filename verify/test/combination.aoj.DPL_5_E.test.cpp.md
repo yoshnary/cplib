@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/combination.aoj.DPL_5_E.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-11 16:48:57+09:00
+    - Last commit date: 2020-05-13 18:08:04+09:00
 
 
 * see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_5_E">https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_5_E</a>
@@ -169,7 +169,6 @@ Mint pow(Mint a, long long b) {
 #line 5 "lib/combination.hpp"
 #include <vector>
 
-// Combinatorics
 constexpr int MAX_N = 2000003;
 std::vector<Mint> fact(MAX_N), inv(MAX_N);
 
