@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/rolling_hash.yuki.430.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-13 09:25:10+09:00
+    - Last commit date: 2020-05-13 09:41:42+09:00
 
 
 * see: <a href="https://yukicoder.me/problems/no/430">https://yukicoder.me/problems/no/430</a>
@@ -95,6 +95,9 @@ int main() {
 
 
 
+#include <vector>
+#line 6 "lib/rolling_hash.hpp"
+#include <utility>
 #line 1 "lib/random_number_generator.hpp"
 
 
@@ -131,7 +134,7 @@ private:
 };
 
 
-#line 5 "lib/rolling_hash.hpp"
+#line 8 "lib/rolling_hash.hpp"
 
 class RollingHash {
 public:

@@ -76,6 +76,7 @@ layout: default
 * :heavy_check_mark: <a href="verify/test/modint.yuki.666.test.cpp.html">test/modint.yuki.666.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/modint_pow.aoj.DPL_5_A.test.cpp.html">test/modint_pow.aoj.DPL_5_A.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/modint_pow.aoj.NTL_1_B.test.cpp.html">test/modint_pow.aoj.NTL_1_B.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/rolling_hash.aoj.2444.test.cpp.html">test/rolling_hash.aoj.2444.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/rolling_hash.yuki.430.test.cpp.html">test/rolling_hash.yuki.430.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/segment_tree.aoj.DSL_2_A.test.cpp.html">test/segment_tree.aoj.DSL_2_A.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/topological_sort.aoj.GRL_4_A.test.cpp.html">test/topological_sort.aoj.GRL_4_A.test.cpp</a>

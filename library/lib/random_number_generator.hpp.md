@@ -43,6 +43,7 @@ layout: default
 
 ## Verified with
 
+* :heavy_check_mark: <a href="../../verify/test/rolling_hash.aoj.2444.test.cpp.html">test/rolling_hash.aoj.2444.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/test/rolling_hash.yuki.430.test.cpp.html">test/rolling_hash.yuki.430.test.cpp</a>
 
 
