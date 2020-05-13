@@ -25,10 +25,10 @@ public:
     }
 
     void set_seed(int s) { seed = s; mt = decltype(mt)(seed); }
-    int get_seed() const { return seed; }
+    long long get_seed() const { return seed; }
 
 private:
-    int seed;
+    long long seed;
     std::mt19937_64 mt;
 };
 
