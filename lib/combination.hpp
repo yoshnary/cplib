@@ -1,10 +1,9 @@
-#ifndef CPLIB_LIB_COMBINATORICS_H_
-#define CPLIB_LIB_COMBINATORICS_H_
+#ifndef CPLIB_LIB_COMBINATION_H_
+#define CPLIB_LIB_COMBINATION_H_
 
 #include "../lib/modint.hpp"
 #include <vector>
 
-// Combinatorics
 constexpr int MAX_N = 2000003;
 std::vector<Mint> fact(MAX_N), inv(MAX_N);
 
@@ -37,4 +36,4 @@ Mint H(int a, int b) {
     return C(a + b - 1, b);
 }
 
-#endif  // CPLIB_LIB_COMBINATORICS_H_
+#endif  // CPLIB_LIB_COMBINATION_H_
