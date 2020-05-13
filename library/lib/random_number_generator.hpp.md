@@ -25,15 +25,25 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: lib/random_number_generator.hpp
+# :heavy_check_mark: lib/random_number_generator.hpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#e8acc63b1e238f3255c900eed37254b8">lib</a>
 * <a href="{{ site.github.repository_url }}/blob/master/lib/random_number_generator.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-13 05:18:05+09:00
+    - Last commit date: 2020-05-13 08:50:08+09:00
 
 
+
+
+## Required by
+
+* :heavy_check_mark: <a href="rolling_hash.hpp.html">lib/rolling_hash.hpp</a>
+
+
+## Verified with
+
+* :heavy_check_mark: <a href="../../verify/test/rolling_hash.yuki.430.test.cpp.html">test/rolling_hash.yuki.430.test.cpp</a>
 
 
 ## Code
@@ -68,10 +78,10 @@ public:
     }
 
     void set_seed(int s) { seed = s; mt = decltype(mt)(seed); }
-    int get_seed() const { return seed; }
+    long long get_seed() const { return seed; }
 
 private:
-    int seed;
+    long long seed;
     std::mt19937_64 mt;
 };
 
@@ -111,10 +121,10 @@ public:
     }
 
     void set_seed(int s) { seed = s; mt = decltype(mt)(seed); }
-    int get_seed() const { return seed; }
+    long long get_seed() const { return seed; }
 
 private:
-    int seed;
+    long long seed;
     std::mt19937_64 mt;
 };
 

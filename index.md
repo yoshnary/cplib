@@ -47,7 +47,8 @@ layout: default
 * :heavy_check_mark: <a href="library/lib/lowest_common_ancestor.hpp.html">lib/lowest_common_ancestor.hpp</a>
 * :heavy_check_mark: <a href="library/lib/matrix_power.hpp.html">lib/matrix_power.hpp</a>
 * :heavy_check_mark: <a href="library/lib/modint.hpp.html">lib/modint.hpp</a>
-* :warning: <a href="library/lib/random_number_generator.hpp.html">lib/random_number_generator.hpp</a>
+* :heavy_check_mark: <a href="library/lib/random_number_generator.hpp.html">lib/random_number_generator.hpp</a>
+* :heavy_check_mark: <a href="library/lib/rolling_hash.hpp.html">lib/rolling_hash.hpp</a>
 * :heavy_check_mark: <a href="library/lib/segment_tree.hpp.html">lib/segment_tree.hpp</a>
 * :heavy_check_mark: <a href="library/lib/topological_sort.hpp.html">lib/topological_sort.hpp</a>
 * :heavy_check_mark: <a href="library/lib/union_find.hpp.html">lib/union_find.hpp</a>
@@ -75,6 +76,7 @@ layout: default
 * :heavy_check_mark: <a href="verify/test/modint.yuki.666.test.cpp.html">test/modint.yuki.666.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/modint_pow.aoj.DPL_5_A.test.cpp.html">test/modint_pow.aoj.DPL_5_A.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/modint_pow.aoj.NTL_1_B.test.cpp.html">test/modint_pow.aoj.NTL_1_B.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/rolling_hash.yuki.430.test.cpp.html">test/rolling_hash.yuki.430.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/segment_tree.aoj.DSL_2_A.test.cpp.html">test/segment_tree.aoj.DSL_2_A.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/topological_sort.aoj.GRL_4_A.test.cpp.html">test/topological_sort.aoj.GRL_4_A.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/topological_sort.aoj.GRL_4_B.test.cpp.html">test/topological_sort.aoj.GRL_4_B.test.cpp</a>
