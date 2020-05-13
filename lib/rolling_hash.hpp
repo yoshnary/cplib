@@ -1,6 +1,9 @@
 #ifndef CPLIB_LIB_ROLLING_HASH_H_
 #define CPLIB_LIB_ROLLING_HASH_H_
 
+#include <vector>
+#include <string>
+#include <utility>
 #include "../lib/random_number_generator.hpp"
 
 class RollingHash {
