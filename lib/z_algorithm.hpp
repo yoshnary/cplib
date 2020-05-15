@@ -15,7 +15,7 @@ std::vector<int> z_algorithm(const std::string &s) {
         ret[begin] = len;
         int t = 1;
         while (t < len && t + ret[t] < len) {
-            ret[len + t] = ret[t];
+            ret[begin + t] = ret[t];
             t++;
         }
         begin += t; len = std::max(0, len - t);
