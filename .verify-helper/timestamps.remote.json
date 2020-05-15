@@ -24,5 +24,6 @@
 "test/segment_tree.aoj.DSL_2_A.test.cpp": "2020-05-11 17:18:45 +0900",
 "test/topological_sort.aoj.GRL_4_A.test.cpp": "2020-05-09 18:52:06 +0900",
 "test/topological_sort.aoj.GRL_4_B.test.cpp": "2020-05-09 18:52:06 +0900",
-"test/union_find.yosupo.unionfind.test.cpp": "2020-05-09 18:52:06 +0900"
+"test/union_find.yosupo.unionfind.test.cpp": "2020-05-09 18:52:06 +0900",
+"test/z_algorithm.yosupo.zalgorithm.test.cpp": "2020-05-15 17:57:27 +0900"
 }
