@@ -52,6 +52,7 @@ layout: default
 * :heavy_check_mark: <a href="library/lib/segment_tree.hpp.html">lib/segment_tree.hpp</a>
 * :heavy_check_mark: <a href="library/lib/topological_sort.hpp.html">lib/topological_sort.hpp</a>
 * :heavy_check_mark: <a href="library/lib/union_find.hpp.html">lib/union_find.hpp</a>
+* :heavy_check_mark: <a href="library/lib/z_algorithm.hpp.html">lib/z_algorithm.hpp</a>
 
 
 ## Verify Files
@@ -82,5 +83,6 @@ layout: default
 * :heavy_check_mark: <a href="verify/test/topological_sort.aoj.GRL_4_A.test.cpp.html">test/topological_sort.aoj.GRL_4_A.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/topological_sort.aoj.GRL_4_B.test.cpp.html">test/topological_sort.aoj.GRL_4_B.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/union_find.yosupo.unionfind.test.cpp.html">test/union_find.yosupo.unionfind.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/z_algorithm.yosupo.zalgorithm.test.cpp.html">test/z_algorithm.yosupo.zalgorithm.test.cpp</a>
 
 
