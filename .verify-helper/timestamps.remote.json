@@ -10,6 +10,7 @@
 "test/extgcd.aoj.NTL_1_E.test.cpp": "2020-05-10 11:45:22 +0900",
 "test/heavy_light_decomposition.aoj.3037.test.cpp": "2020-05-11 17:18:45 +0900",
 "test/heavy_light_decomposition.aoj.GRL_5_E.test.cpp": "2020-05-09 20:19:23 +0900",
+"test/knuth_morris_pratt.aoj.ALDS1_14_B.test.cpp": "2020-05-16 01:16:19 +0900",
 "test/lazy_segment_tree.aoj.DSL_2_G.test.cpp": "2020-05-09 19:52:32 +0900",
 "test/lowest_common_ancestor.aoj.GRL_5_C.test.cpp": "2020-05-09 18:52:06 +0900",
 "test/matrix_power.yuki.1050.test.cpp": "2020-05-09 18:52:06 +0900",
