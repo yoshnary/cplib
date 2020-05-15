@@ -43,6 +43,7 @@ layout: default
 * :heavy_check_mark: <a href="library/lib/euler_tour.hpp.html">lib/euler_tour.hpp</a>
 * :heavy_check_mark: <a href="library/lib/extgcd.hpp.html">lib/extgcd.hpp</a>
 * :heavy_check_mark: <a href="library/lib/heavy_light_decomposition.hpp.html">lib/heavy_light_decomposition.hpp</a>
+* :heavy_check_mark: <a href="library/lib/knuth_morris_pratt.hpp.html">lib/knuth_morris_pratt.hpp</a>
 * :heavy_check_mark: <a href="library/lib/lazy_segment_tree.hpp.html">lib/lazy_segment_tree.hpp</a>
 * :heavy_check_mark: <a href="library/lib/lowest_common_ancestor.hpp.html">lib/lowest_common_ancestor.hpp</a>
 * :heavy_check_mark: <a href="library/lib/matrix_power.hpp.html">lib/matrix_power.hpp</a>
@@ -68,6 +69,7 @@ layout: default
 * :heavy_check_mark: <a href="verify/test/extgcd.aoj.NTL_1_E.test.cpp.html">test/extgcd.aoj.NTL_1_E.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/heavy_light_decomposition.aoj.3037.test.cpp.html">test/heavy_light_decomposition.aoj.3037.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/heavy_light_decomposition.aoj.GRL_5_E.test.cpp.html">test/heavy_light_decomposition.aoj.GRL_5_E.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/knuth_morris_pratt.aoj.ALDS1_14_B.test.cpp.html">test/knuth_morris_pratt.aoj.ALDS1_14_B.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/lazy_segment_tree.aoj.DSL_2_G.test.cpp.html">test/lazy_segment_tree.aoj.DSL_2_G.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/lowest_common_ancestor.aoj.GRL_5_C.test.cpp.html">test/lowest_common_ancestor.aoj.GRL_5_C.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/matrix_power.yuki.1050.test.cpp.html">test/matrix_power.yuki.1050.test.cpp</a>
