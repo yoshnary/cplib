@@ -5,7 +5,7 @@
 
 class UnionFind {
 public:
-    UnionFind(int n) : par(n, -1), ran(n, -1) {};
+    UnionFind(int n) : par(n, -1), ran(n, -1) {}
 
     void unite(int x, int y) {
         x = find_root(x);
