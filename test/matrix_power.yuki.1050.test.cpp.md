@@ -33,10 +33,10 @@ data:
     \ \" \\n\"[j == (int)a[i].size() - 1];\n        }\n    }\n    return out;\n}\n\
     \ntemplate<typename T>\nMatrix<T> matmul(const Matrix<T> &a, const Matrix<T> &b)\
     \ {\n    int n = (int)a.size();\n    int m = (int)b[0].size();\n    int r = (int)b.size();\n\
-    \    assert(a[0].size() == r);\n    Matrix<T> ret(n, m);\n    for (int i = 0;\
-    \ i < n; i++) {\n        for (int k = 0; k < r; k++) {\n            for (int j\
-    \ = 0; j < m; j++) {\n                ret[i][j] += a[i][k] * b[k][j];\n      \
-    \      }\n        }\n    }\n    return ret;\n}\n\ntemplate<typename T>\nMatrix<T>\
+    \    assert((int)a[0].size() == r);\n    Matrix<T> ret(n, m);\n    for (int i\
+    \ = 0; i < n; i++) {\n        for (int k = 0; k < r; k++) {\n            for (int\
+    \ j = 0; j < m; j++) {\n                ret[i][j] += a[i][k] * b[k][j];\n    \
+    \        }\n        }\n    }\n    return ret;\n}\n\ntemplate<typename T>\nMatrix<T>\
     \ matpow(Matrix<T> a, long long p) {\n    int n = (int)a.size();\n    Matrix<T>\
     \ ret(n);\n    for (int i = 0; i < n; i++) ret[i][i] = 1;\n    while (p > 0) {\n\
     \        if (p & 1) ret = matmul(ret, a);\n        a = matmul(a, a);\n       \
@@ -88,7 +88,7 @@ data:
   isVerificationFile: true
   path: test/matrix_power.yuki.1050.test.cpp
   requiredBy: []
-  timestamp: '2020-05-09 18:52:06+09:00'
+  timestamp: '2021-04-25 15:56:13+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/matrix_power.yuki.1050.test.cpp
