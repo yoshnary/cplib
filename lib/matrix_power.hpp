@@ -35,7 +35,7 @@ Matrix<T> matmul(const Matrix<T> &a, const Matrix<T> &b) {
     int n = (int)a.size();
     int m = (int)b[0].size();
     int r = (int)b.size();
-    assert(a[0].size() == r);
+    assert((int)a[0].size() == r);
     Matrix<T> ret(n, m);
     for (int i = 0; i < n; i++) {
         for (int k = 0; k < r; k++) {
